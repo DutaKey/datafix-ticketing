@@ -98,15 +98,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
                     {/* Right Section: Notification & Profile */}
                     <div className="flex items-center gap-4">
-                        {/* Notification Bell */}
-                        <button className="relative flex size-10 cursor-pointer items-center justify-center rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
-                            <span className="material-symbols-outlined">notifications</span>
-                            <span className="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white"></span>
-                        </button>
-
-                        {/* Divider */}
-                        <div className="h-8 w-px bg-slate-200 mx-2"></div>
-
                         {/* User Profile Dropdown */}
                         <div className="relative" ref={dropdownRef}>
                             <button

@@ -27,3 +27,14 @@ export const updateUserProfile = async (userId: string, updates: Partial<Profile
 
     return { data, error };
 };
+
+export const createUser = async (user: { email: string; password: string; full_name: string; role: string }) => {
+    const { data, error } = await supabase.rpc('create_new_user', {
+        email: user.email,
+        password: user.password,
+        full_name: user.full_name,
+        role_name: user.role
+    });
+
+    return { data, error };
+};

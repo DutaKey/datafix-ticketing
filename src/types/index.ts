@@ -50,6 +50,8 @@ export interface Feature {
 export interface Profile {
     id: string;
     full_name: string;
+    display_name?: string; // Added per user request
+    email?: string; // Added for display fallback
     role: UserRole;
     branch_id?: string;
     created_at: string;

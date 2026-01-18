@@ -61,17 +61,13 @@ const Dashboard: React.FC = () => {
                 <div className="flex flex-wrap justify-between items-center gap-4 mb-8">
                     <div className="flex flex-col gap-1">
                         <h1 className="text-slate-900 text-3xl font-black leading-tight tracking-tight">
-                            Welcome back, {profile?.full_name || 'Admin'}
+                            Welcome back, {profile?.display_name || profile?.full_name || profile?.email || 'User'}
                         </h1>
                         <p className="text-slate-500 text-base font-normal">
                             Manage and track your data correction requests efficiently.
                         </p>
                     </div>
                     <div className="flex gap-3">
-                        <button className="flex items-center justify-center gap-2 px-4 h-11 bg-white border border-slate-200 text-slate-700 text-sm font-bold rounded-lg hover:bg-slate-50 transition-all">
-                            <span className="material-symbols-outlined text-lg">filter_list</span>
-                            <span>Filters</span>
-                        </button>
                         <button
                             onClick={() => navigate('/tickets/new')}
                             className="flex items-center justify-center gap-2 px-5 h-11 bg-primary text-white text-sm font-bold rounded-lg shadow-lg shadow-primary/20 hover:brightness-110 transition-all"

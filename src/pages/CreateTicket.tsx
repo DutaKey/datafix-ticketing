@@ -155,7 +155,7 @@ const CreateTicket: React.FC = () => {
             if (detailLines.length > 0 && ticket) {
                 const { error: linesError } = await addDetailLines(ticket.id, detailLines);
                 if (linesError) console.error("Error adding detail lines:", linesError);
-                if (linesError) throw new Error(`Gagal menyimpan detail lines: ${linesError.message || JSON.stringify(linesError)}`);
+                if (linesError) throw new Error(`Gagal menyimpan detail lines: ${(linesError as any).message || JSON.stringify(linesError)}`);
             }
 
             if (screenshots.length > 0 && ticket) {
